@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Anime recommendation website </title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="shortcut icon" href='#' />
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1> ANIME SEARCH</h1>
+    <form id="searchForm">
+        <input type="text" placeholder="Type anime name!" required name="name">
+        <button id="findButton">Find!</button>
+    </form>
+    <div id="animeBox">
+        <div id="anime">
+            <div id="title"></div>
+            <div id="image"></div>
+            <div id="description"></div>
+            <div id="more">
+                <!--year, episodes, rating--> 
+            </div>
+        </div>
+        <div id="quote"></div>
+    </div>
+    <div id="footerHolder">
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
