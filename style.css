@@ -1,0 +1,113 @@
+:root {
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --red: #ff7070;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+    --border-radius: 8px;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    --container-width: 1200px;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    word-wrap: break-word;
+    font-weight: 200;
+    margin-bottom: 100px;
+}
+
+#main{
+    background-color: var(--light-green);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#main h1{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#main p{
+    margin: 0.5em 0 0 0;
+    margin-bottom: 15px;
+}
+
+#searchBox{
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#anime{
+    background-color: wheat;
+}
+
+#title{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#image{
+    background-color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+#description{
+    background-color: yellow;
+}
+
+#more{
+    background-color: aqua;
+}
+
+#quote{
+    background-color: greenyellow;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    gap: 10px;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fa-github {
+    font-size: 24px;
+    color: #000000;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.3);
+  }

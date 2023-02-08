@@ -5,16 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Anime recommendation website </title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="shortcut icon" href='#' />
+    <link rel="shortcut icon" href='img/icon.png' />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js" defer></script>
 </head>
 <body>
-    <h1> ANIME SEARCH</h1>
-    <form id="searchForm">
-        <input type="text" placeholder="Type anime name!" required name="name">
-        <button id="findButton">Find!</button>
-    </form>
+    <div id="main">
+        <h1> ANIME SEARCH</h1>
+        <p>Anime made easy.</p>
+    </div>
+    <div id="searchBox">
+        <form id="searchForm">
+            <input type="text" placeholder="Type anime name!" required name="name">
+            <button id="findButton">Find!</button>
+        </form>
+    </div>
     <div id="animeBox">
         <div id="anime">
             <div id="title"></div>
@@ -28,7 +44,16 @@
     </div>
     <div id="footerHolder">
         <footer>
-
+            <p>
+                Copyright ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>
+                RuanUrb
+            </p>
+            <a href="https://github.com/RuanUrb" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
         </footer>
     </div>
 </body>

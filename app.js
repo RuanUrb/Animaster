@@ -48,7 +48,6 @@ const getAnimeQuote = async (input) => {
     }
     catch(error){
         return ['', '']
-        //displays no quote to the user
     }
 }
 
@@ -109,7 +108,6 @@ const appendImage = (father, imgLink) => {
 }
 
 const cleanPage = () => {
-    //reposition function call inside try block, in order to only refresh page when api call is successful
     while(title.firstChild) title.firstChild.remove()
     while(descr.firstChild) descr.firstChild.remove()
     while(img.firstChild) img.firstChild.remove()
