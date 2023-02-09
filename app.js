@@ -56,12 +56,12 @@ const getAnimeData = async (input) => {
         const res = await axios.get
     (`https://kitsu.io/api/edge/anime?filter[text]=${input}`, {headers: {'Accept' : 'application/vnd.api+json', 'Content-Type':'application/vnd.api+json'}})
     const firstGet = res.data.data[0]
-    let type = firstGet.type
+    let type = capitalizeFirstLetter(firstGet.type)
     let title = firstGet.attributes.canonicalTitle
-    let rating = ((Math.round(firstGet.attributes.averageRating))/10).toString()
-    let episodes = firstGet.attributes.episodeCount
+    let rating = "Rating: " + ((Math.round(firstGet.attributes.averageRating))/10).toString()
+    let episodes = "Episodes: " + firstGet.attributes.episodeCount
     let synopsis = firstGet.attributes.synopsis
-    let year = firstGet.attributes.startDate.substring(0, 4)
+    let year = "Year: " + firstGet.attributes.startDate.substring(0, 4)
     let imgLink = firstGet.attributes.posterImage.large
 
     return new Media(type, title, rating, episodes, synopsis, year, imgLink)
@@ -87,7 +87,10 @@ const appendToPage = (character, quote_ex, media) => {
     append(title, media.title, 'h1')
     append(title, media.type, 'h2')
     appendImage(img, media.imgLink)
+    append(descr, "Synopsis: ", 'p')
     append(descr, media.synopsis, 'p')
+    descr.style.visibility = 'visible'
+    more.style.visibility = 'visible'
     append(more, media.rating, 'strong')
     append(more, media.episodes, 'p')
     append(more, media.year, 'p')
@@ -113,4 +116,8 @@ const cleanPage = () => {
     while(img.firstChild) img.firstChild.remove()
     while(more.firstChild) more.firstChild.remove()
     while(quote.firstChild) quote.firstChild.remove()
+}
+
+const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1)
 }

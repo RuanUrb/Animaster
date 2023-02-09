@@ -16,6 +16,13 @@
   }
 
 
+
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
 html{
     position: relative;
     min-height: 100%;
@@ -27,20 +34,34 @@ body{
     word-wrap: break-word;
     font-weight: 200;
     margin-bottom: 100px;
+    background: linear-gradient(black, rgb(85, 83, 83));
+    
+    background-image: url(img/rena.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#rika{
+    width: 56px;
+    height: 70px;
+    margin-right: 10px;
 }
 
 #main{
-    background-color: var(--light-green);
+
+    background: linear-gradient(#020e11, #040631);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
+    color: gainsboro;
 }
 
 #main h1{
     margin-top: 10px;
     margin-bottom: 0px;
+    font-size: 50px;
 }
 
 #main p{
@@ -49,79 +70,123 @@ body{
 }
 
 #searchBox{
-    background-color: var(--red);
+    background: linear-gradient(#0c2a33, #2d2f61);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: 50px;
 }
 
-#animeBox {
+form{
+    margin: 20px;
+}
+
+input[type="text"]{
+    color: gainsboro;
+    width: 450px;
+    height: 50px;
+    border-radius: 8px;
+    vertical-align: middle;
+    font-size: 20px;
+    font-family: 'Poppins';
+    background-color: rgb(71, 71, 71);
+}
+
+#findButton{
+    width: 55px;
+    height: 55px;
+    border-radius: 6px;
+    vertical-align: middle;
+    font-size: 18px;
+    background-color: rgb(71, 71, 71);
+    color: gainsboro;
+}
+
+#findButton:hover{
+    cursor: pointer;
+    background-color: rgb(114, 114, 114);
+    height: 60px;
+    width: 60px;
+}
+
+
+#animeBox{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: gray;
 }
 
-#anime {
+#anime{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    background-color: wheat;
-}
-
-#description {
-    width: 40%;
-    text-align: center;
-    padding-right: 20px;
-    background-color: yellow;
+    flex-direction: column;
+    
 }
 
 #title{
-    width: 100%;
-    text-align: center;
-    padding-bottom: 20px;
-    background-color: blue;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-/*
-#image{
-    background-color: violet;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-*/
-
-#image {
-    width: 40%;
-    text-align: center;
-    padding-left: 20px;
-    padding-left: 20px;
-    background-color: violet;
+    color: gainsboro;
+    
 }
 
-#more {
-    width: 20%;
-    text-align: center;
-    padding-left: 20px;
-    background-color: aqua;
+#title h1{
+    margin-bottom: 5px;
+    font-size: 50px;
 }
 
+#other{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+#description{
+    padding: 8px;
+    visibility: hidden;
+    background-color: gainsboro;
+    border-radius: 10px;
+    width: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#more{
+    padding: 8px;
+    width: 10%;
+    margin-left: 5%;
+    background-color: gainsboro;
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+#image{
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+#image img{
+    border: 5px solid gainsboro;
+    border-radius: 7px;
+    max-width: 100%;
+    max-height: 100%;
+}
 
 #quote{
-    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: gainsboro;
+    font-size: 20px;
+    width: 60%;
+    margin: auto;
 }
 
 footer{
     position: absolute;
     width: 100%;
-    background-color: red;
+    background-color: rgb(71, 71, 71);
     display: flex;
     gap: 10px;
     bottom: 0;
@@ -130,10 +195,14 @@ footer{
     justify-content: center;
 }
 
+footer p{
+    color: gainsboro;
+}
+
 
 .fa-github {
     font-size: 24px;
-    color: #000000;
+    color: white;
     transition: transform 0.3s ease-in-out;
   }
   

@@ -22,21 +22,27 @@
 </head>
 <body>
     <div id="main">
-        <h1> ANIME SEARCH</h1>
-        <p>Anime made easy.</p>
+        <h1>ANIMASTER</h1>
+        <img id="rika" src="img/rika.png">
+        <p>Anime made easy!</p>
     </div>
     <div id="searchBox">
         <form id="searchForm">
             <input type="text" placeholder="Type anime name!" required name="name">
-            <button id="findButton">Find!</button>
+            <button id="findButton">
+                <i class="fas fa-search"></i>    
+                Find!
+            </button>
         </form>
     </div>
     <div id="animeBox">
         <div id="anime">
             <div id="title"></div>
-            <div id="image"></div>
-            <div id="description"></div>
-            <div id="more">
+            <div id="other">
+                <div id="description"></div>
+                <div id="image"></div>
+                <div id="more"></div>
+            </div>
                 <!--year, episodes, rating--> 
             </div>
         </div>
