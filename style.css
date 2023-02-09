@@ -55,12 +55,32 @@ body{
     align-items: center;
 }
 
+#animeBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+}
 
-#anime{
+#anime {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
     background-color: wheat;
 }
 
+#description {
+    width: 40%;
+    text-align: center;
+    padding-right: 20px;
+    background-color: yellow;
+}
+
 #title{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
     background-color: blue;
     display: flex;
     align-items: center;
@@ -68,6 +88,7 @@ body{
     flex-direction: column;
 }
 
+/*
 #image{
     background-color: violet;
     display: flex;
@@ -75,15 +96,23 @@ body{
     justify-content: center;
     height: 100%;
 }
+*/
 
-
-#description{
-    background-color: yellow;
+#image {
+    width: 40%;
+    text-align: center;
+    padding-left: 20px;
+    padding-left: 20px;
+    background-color: violet;
 }
 
-#more{
+#more {
+    width: 20%;
+    text-align: center;
+    padding-left: 20px;
     background-color: aqua;
 }
+
 
 #quote{
     background-color: greenyellow;
